@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AMir Signals | OTC</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #0b1020;
+      color: #f1f5f9;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .wrap { max-width: 600px; margin: auto; }
+    header { text-align: center; padding: 24px 0; }
+    h1 { color: #38bdf8; margin-bottom: 8px; }
+    .muted { color: #94a3b8; font-size: 14px; }
+    .card {
+      background: #151d31;
+      border: 1px solid #293750;
+      border-radius: 14px;
+      padding: 18px;
+      margin: 14px 0;
+    }
+    .signal {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #fbbf24;
+      padding: 16px;
+    }
+    .line {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 12px 0;
+    }
+    .status { color: #fbbf24; }
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+      padding: 14px;
+      background: #0284c7;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 12px;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>AMir Signals</h1>
+      <div class="muted">Quotex OTC Signal Dashboard</div>
+    </header>
+
+    <section class="card">
+      <div class="line">
+        <span>مارکیٹ</span>
+        <strong>Quotex OTC</strong>
+      </div>
+      <div class="line">
+        <span>ٹائم فریم</span>
+        <strong>M5 — 5 منٹ</strong>
+      </div>
+      <div class="line">
+        <span>ڈیٹا کی تصدیق</span>
+        <strong class="status" id="dataStatus">
+          ابھی تصدیق نہیں ہوئی
+        </strong>
+      </div>
+      <div class="signal" id="signal">NO TRADE</div>
+      <p class="muted" id="message" style="text-align:center">
+        بیک اینڈ ابھی منسلک نہیں۔ کوئی حقیقی سگنل جاری نہیں کیا جا رہا۔
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>سگنل لاگ</h3>
+      <p class="muted" id="log">
+        ابھی کوئی تصدیق شدہ سگنل موجود نہیں۔
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>ڈیٹا کی حالت</h3>
+      <div class="line">
+        <span>OTCharts API</span>
+        <strong class="status">ابھی منسلک نہیں</strong>
+      </div>
+      <div class="line">
+        <span>Cloudflare Worker</span>
+        <strong class="status">ابھی منسلک نہیں</strong>
+      </div>
+      <p class="muted">
+        سگنل صرف ڈیٹا اور تازہ کینڈلز کی جانچ کامیاب ہونے کے بعد دکھایا جائے گا۔
+      </p>
+      <button onclick="alert('اگلے مرحلے میں Cloudflare Worker منسلک کیا جائے گا۔')">
+        کنکشن کی تیاری
+      </button>
+    </section>
+
+    <footer>
+      AMir Signals © 2026<br>
+      سگنلز کی ضمانت نہیں۔ پہلے ڈیمو ٹیسٹنگ کریں۔
+    </footer>
+  </main>
+</body>
+  </html>
+      
